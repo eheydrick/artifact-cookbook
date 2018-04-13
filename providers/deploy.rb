@@ -218,7 +218,7 @@ end
 def extract_artifact!
   recipe_eval do
     case ::File.extname(cached_tar_path)
-    when /(tar|tgz|tar\.gz|tbz2|tbz|tar\.xz)$/
+    when /(tar|tgz|tar\.gz|gz|tbz2|tbz|tar\.xz)$/
 
       taropts = [ '-x' ]
       taropts.push('-z') if cached_tar_path.match(/(tgz|tar\.gz)$/)
